@@ -1,0 +1,16 @@
+services:
+  nginx:
+    restart: unless-stopped
+    ports:
+      - "4001:80"
+  
+  php-fpm:
+    restart: unless-stopped
+
+  mysql:
+    restart: unless-stopped
+
+  phpmyadmin:
+    restart: unless-stopped
+    ports:
+      - "6001:80"
